@@ -1,99 +1,97 @@
-🏥 Hospital Management System (Laravel)
+# 🏥 Hospital Management System (Laravel)
 
-A complete Hospital Management System built with Laravel to manage doctors, patients, appointments, and hospital operations between Admins, Doctors, Receptionists, Nurses, and Patients — with medical records, prescriptions, medicines, admissions, billing, and reports through a powerful Admin Dashboard.
+A complete Hospital Management System built with Laravel to manage doctors, patients, appointments, medical records, prescriptions, medicines, admissions, and billing — with role-based access control and reporting through a powerful Admin Dashboard.
 
-🚀 Features
+## 🚀 Features
 
-Dashboard
-* Role-based Dashboard (Admin / Doctor / Receptionist / Nurse / Patient)
-* Stat Cards (Patients, Doctors, Departments, Appointments, Revenue, Admissions)
-* Low Stock Medicine Alerts
+- Role-based Dashboard (Admin / Doctor / Receptionist / Nurse / Patient)
+- Doctor, Patient & Department Management
+- Appointment Booking & Management
+- Medical Records with Attachments
+- Prescription Management
+- Medicine Inventory with Stock & Expiry Tracking
+- Patient Admissions (Ward, Bed, Admit/Discharge)
+- Billing & Invoicing with Auto-Calculated Totals
+- Reports with Filters and Excel Export
+- User Management with Role-based Access Control
+- Account Settings (Profile & Password Update)
+- Secure Authentication
 
-Doctor Management
-* Add Doctor
-* Edit Doctor
-* Delete Doctor
-* View Doctor Details
-* Assign Department, Specialization, Qualification & Consultation Fee
+## 🛠️ Tech Stack
 
-Patient Management
-* Add Patient
-* Edit Patient
-* Delete Patient
-* View Patient Details
+- Laravel
+- PHP
+- MySQL
+- Blade Template Engine
+- Font Awesome
 
-Department Management
-* Add / Edit / Delete Departments
-* View Department Details
-
-Appointment Management
-* Book Appointment
-* Edit / Delete Appointment
-* View Appointment Details
-* Assign Doctor & Patient to Appointment
-
-Medical Records
-* Add / Edit / Delete Medical Record
-* View Medical Record Details
-* Record Types (Consultation, Lab Report, X-Ray, Surgery, Vaccination, Other)
-* Attachment Upload (PDF, JPG, PNG)
-
-Prescription Management
-* Add / Edit / Delete Prescription
-* View Prescription Details
-* Link Prescription to Patient & Doctor
-
-Medicine Inventory
-* Add / Edit / Delete Medicine
-* Stock Quantity Tracking (Low Stock / Out of Stock Alerts)
-* Expiry Date Tracking
-
-Admission Management
-* Admit / Discharge / Transfer Patient
-* Ward & Bed Assignment
-* Track Admission & Discharge Date/Time
-* Reason & Diagnosis Notes
-
-Billing & Invoicing
-* Auto-Generated Invoice Numbers
-* Auto-Calculated Total Amount
-* Payment Tracking (Paid Amount, Balance Due / Overpaid)
-* Invoice Status (Pending, Paid, Partially Paid, Cancelled)
-
-Reports
-* Billing Report with Search, Status & Date Filters
-* Export Report to Excel (CSV)
-* Hospital-wide Summary Cards
-
-User Management (Admin)
-* Add User / Doctor / Receptionist / Nurse / Patient Account
-* Edit User
-* Delete User
-* Role-based Access Control
-
-Account Settings
-* Update Profile (Name, Email, Phone)
-* Change Password
-
-Authentication
-* Secure Login
-* Register
-* Role-based Access Control (Admin / Doctor / Receptionist / Nurse / Patient)
-* Logout Functionality
-
-🛠️ Tech Stack
-* Laravel
-* PHP
-* MySQL
-* Blade Template Engine
-* Font Awesome
-
-⚙️ Project Setup (After Downloading from GitHub)
+## ⚙️ Project Setup (After Downloading from GitHub)
 
 Follow these steps in order after downloading or cloning the project.
 
-✅ Step 1 — Open Project in VS Code
+**✅ Step 1 — Open Project in VS Code**
 Open the project folder and open the terminal inside it.
 
-✅ Step 2 — Create `.env` File
-Run:
+**✅ Step 2 — Create `.env` File**
+
+cp .env.example .env
+
+
+**✅ Step 3 — Install Vendor Packages**
+
+composer install --ignore-platform-reqs
+
+
+**✅ Step 4 — Generate Application Key**
+
+php artisan key:generate
+
+
+**✅ Step 5 — Configure Database**
+Open the `.env` file and update the following values:
+
+APP_NAME="Hospital Management System"
+APP_ENV=local
+APP_DEBUG=true
+APP_URL=http://127.0.0.1:8000
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=hospital_management_system
+DB_USERNAME=root
+DB_PASSWORD=
+
+SESSION_DRIVER=file
+CACHE_STORE=file
+QUEUE_CONNECTION=database
+
+
+**✅ Step 6 — Run Migrations and Seed Demo Data**
+
+php artisan migrate:fresh --seed
+
+
+**✅ Step 7 — Start Laravel Development Server**
+
+php artisan serve
+
+
+**✅ Step 8 — Open in Browser**
+
+http://127.0.0.1:8000
+
+
+## 🔐 Default Login Credentials (Demo)
+
+**Admin**
+
+Email: admin@gmail.com
+Password: password
+
+
+## 👨‍💻 Author
+Faijan Shaikh
+
+## 📌 Note
+This project was developed for learning and portfolio purposes using Laravel. If you encounter any issues during installation or setup, please create an issue in the repository or contact me. I will do my best to help.
