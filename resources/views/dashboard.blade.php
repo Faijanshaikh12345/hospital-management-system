@@ -280,7 +280,7 @@
                 </div>
             </a>
 
-            <a href="{{ route('medicalrecord.index') }}" class="stat-link">
+            <a href="{{ route('medicalRecord.index') }}" class="stat-link">
                 <div class="stat-card">
                     <div class="stat-icon bg-emerald"><i class="fas fa-file-medical"></i></div>
                     <div class="stat-body">
